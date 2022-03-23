@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+  - name: Delete user
+    user:
+      name: "{{item}}"
+      state: absent
+      remove: yes
+      force: yes
+    with_items:
+    - ram
+#    - ramki
+    become: yes

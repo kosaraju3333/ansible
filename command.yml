@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks: 
+  - name: shell commands tasks
+    command: "{{item}}"
+    with_items:
+      - touch test_command.txt
+      - mkdir test_command
+      - touch test_command/test.txt
+      - free -m 
+      - df -h

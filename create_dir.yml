@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+  ########## Creating directory ##########
+  - name:
+    file:
+      path: /home/ubuntu/ram
+      state: directory
+      mode: 444
+      owner: root
+      group: root
+    become: yes
+
+    

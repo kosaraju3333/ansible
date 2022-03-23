@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+  - name: replace the word
+    replace:
+      path: /home/ubuntu/abcd.txt
+      regexp: 'ansible'
+      replace: "DevOps"
+
+
