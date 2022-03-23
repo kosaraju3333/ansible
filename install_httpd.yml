@@ -1,0 +1,20 @@
+---
+- hosts: [website]
+  tasks:
+  ########## Updating apt-get #########
+  - name: updating apt-get
+    shell:
+      cmd: apt-get update
+    become: true
+  ############ Installing Packages ########   
+  - name: Install httpd  service
+    apt:
+      name: apache2
+      state: latest
+      update_cache: true
+    become: true
+      
+
+
+
+    

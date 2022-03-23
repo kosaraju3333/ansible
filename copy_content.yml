@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+  - name: copy content to VM's
+    copy:
+      content: "Welcome to ansible \n"
+      dest: /home/ubuntu/abcd.txt

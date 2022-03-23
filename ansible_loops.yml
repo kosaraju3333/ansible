@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+  - name: creating file
+    file:
+      path: /home/ubuntu/{{item}}
+      state: absent
+    with_items:
+    - 'ram1'
+    - 'ram2'
+    - 'ram3'
+    - 'ram4'
+    - 'ram5'

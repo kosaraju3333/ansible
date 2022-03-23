@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  ########## Remove files ##########
+  - name: Removing files
+    file:
+      path: /home/ubuntu/create.txt
+      state: absent
